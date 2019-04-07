@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Calculator</h1>
+        <h1 id="app-title">Calculator</h1>
         <Calculator />
       </div>
     );

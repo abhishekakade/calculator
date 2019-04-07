@@ -6,8 +6,8 @@ export default class Calculator extends Component {
       <div>
         <section>
           {/* <h2>Some Heading</h2> */}
-          <h3 id="display">Display</h3>
           <div id="container">
+            <span id="display">Display</span>
             <button id="clear">AC</button>
             <button className="operator" id="divide">
               /
