@@ -19,10 +19,10 @@
   margin: auto;
   margin-bottom: 4rem;
   padding: 0;
-  border: 5px solid black;
+  border: 4px solid black;
   border-radius: 10px;
-  border-top: 3px solid #333333;
-  border-bottom: 3px solid #222222;
+  border-top: 4px solid #333333;
+  border-bottom: 4px solid #222222;
   box-shadow: 5px 10px 20px 5px black;
   background: #000000;
   display: grid;
@@ -34,7 +34,7 @@
 
 button {
   color: #bbbbbb;
-  border: 0.5px solid #20001f;
+  border: 1px solid #20001f;
   font-size: 1.35rem;
   margin: 0;
   background: black;
@@ -44,7 +44,7 @@ button {
 
 button:hover {
   transition: all 100ms;
-  border: 0.5px solid #777777;
+  border: 1px solid #777777;
   text-shadow: 0 0 0.75rem #000000;
 }
 
@@ -69,11 +69,13 @@ button:hover {
 #wide-zero {
   grid-column: 1 / 3;
   grid-row: 6;
+  border-bottom-left-radius: 8px;
 }
 
 #equals {
   grid-column: 4;
   grid-row: 5 / span 6;
+  border-bottom-right-radius: 8px;
 }
 
 #divide,
@@ -84,14 +86,14 @@ button:hover {
 #equals {
   background: #000000;
   color: #928458;
-  border: 0.5px solid #2f001f;
+  border: 1px solid #2f001f;
 }
 
 #divide:active,
 #multiply:active,
 #add:active,
 #subtract:active {
-  border: 0.5px solid #555555;
+  border: 1px solid #555555;
   box-shadow: 0 0 0.75rem #928458 inset;
 }
 
@@ -100,11 +102,11 @@ button:hover {
 #add:hover,
 #subtract:hover {
   transition: all 200ms;
-  border: 0.5px solid #928458;
+  border: 1px solid #928458;
 }
 
 button:active {
-  border: 0.5px solid #555555;
+  border: 1px solid #555555;
   box-shadow: 0 0 0.5rem #777777 inset;
 }
 
@@ -113,7 +115,7 @@ button:active {
 }
 
 #clear:hover {
-  border: 0.5px solid darkred;
+  border: 1px solid darkred;
 }
 
 #equals:active {
@@ -121,7 +123,7 @@ button:active {
 }
 
 #equals:hover {
-  border: 0.5px solid green;
+  border: 1px solid green;
 }
 
 #divide {
@@ -136,11 +138,11 @@ button:active {
   }
 
   #container {
-    grid-template-columns: repeat(4, 4rem);
+    grid-template-columns: repeat(4, 20vw);
     grid-template-rows: repeat(6, 3rem);
-    border: 3px solid #000000;
-    border-top: 4px solid #333333;
-    border-bottom: 3px solid #222222;
+    overflow: hidden;
+    margin-bottom: 0;
+    margin: 0 auto;
   }
 
   button {
@@ -153,7 +155,7 @@ button:active {
   #subtract,
   #clear,
   #equals {
-    border: 0.5px solid #2f001f;
+    border: 1px solid #2f001f;
   }
 
   #display {
@@ -162,6 +164,13 @@ button:active {
 
   #clear {
     font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #container {
+    grid-template-columns: repeat(4, 24vw);
+    grid-template-rows: repeat(6, 10vh);
   }
 }
 
@@ -175,7 +184,6 @@ button:active {
   #container {
     grid-template-columns: repeat(4, 6rem);
     grid-template-rows: repeat(6, 4.5rem);
-    border-bottom: 4px solid #222222;
   }
 
   button {
